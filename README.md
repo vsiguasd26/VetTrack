@@ -49,17 +49,22 @@ sudo tar -xvzf apache-tomcat-11.0.7.tar.gz
 sudo mv apache-tomcat-11.0.7 tomcat
 sudo chmod +x /opt/tomcat/bin/*.sh
 sudo nano /opt/tomcat/conf/tomcat-users.xml
+```
+```ini
 <role rolename="manager-gui"/>
 <role rolename="admin-gui"/>
 <user username="admin" password="admin123" roles="manager-gui,admin-gui"/>
+```
+```bash
 sudo nano /opt/tomcat/webapps/manager/META-INF/context.xml
+```
+```ini
 <!--
 <Valve className="org.apache.catalina.valves.RemoteAddrValve"
        allow="127\.\d+\.\d+\.\d+|::1"/>
 -->
-
+```bash
 sudo systemctl restart tomcat.service
-
 ```
 
 ---
