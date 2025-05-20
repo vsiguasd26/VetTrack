@@ -128,7 +128,7 @@ sudo cp VetTrackWeb.war /opt/tomcat/webapps/
 Luego accede desde:
 
 ```
-http://44.202.127.132:8080/VetTrackWeb/
+http://44.202.127.132:8080/VetTrack/
 ```
 
 ---
