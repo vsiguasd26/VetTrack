@@ -1,0 +1,81 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="700" fill="#f9f9f9" />
+  
+  <!-- AWS Cloud -->
+  <rect x="50" y="50" width="700" height="600" rx="20" ry="20" fill="#F2F3F4" stroke="#999" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#333">AWS Cloud (us-east-1c)</text>
+  
+  <!-- VPC -->
+  <rect x="100" y="120" width="600" height="500" rx="10" ry="10" fill="#E1F5FE" stroke="#0277BD" stroke-width="2" />
+  <text x="400" y="150" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#0277BD">VPC</text>
+  
+  <!-- EC2 Instance - Web Server -->
+  <rect x="160" y="180" width="240" height="400" rx="5" ry="5" fill="#BBDEFB" stroke="#1565C0" stroke-width="2" />
+  <text x="280" y="210" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#1565C0">VetTrackSistemaWeb</text>
+  <text x="280" y="235" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">t2.micro - 44.202.127.132</text>
+  <text x="280" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Apache Tomcat / i-04e5869fbfafe660c</text>
+  
+  <!-- Architecture Layers in Web Server -->
+  <!-- Presentation Layer -->
+  <rect x="180" y="280" width="200" height="80" rx="5" ry="5" fill="#FFF9C4" stroke="#FBC02D" stroke-width="2" />
+  <text x="280" y="310" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Capa de Presentación</text>
+  <text x="280" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Web Pages (JSP): index.jsp, listar.jsp, registrar.jsp</text>
+  <text x="280" y="350" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Recursos: estilo.css, web.xml</text>
+  
+  <!-- Business Logic Layer -->
+  <rect x="180" y="370" width="200" height="80" rx="5" ry="5" fill="#C8E6C9" stroke="#388E3C" stroke-width="2" />
+  <text x="280" y="400" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Capa de Lógica de Negocio</text>
+  <text x="280" y="425" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">lógica: GestorMascotas.java</text>
+  <text x="280" y="440" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">presentación: MascotaServlet.java</text>
+  
+  <!-- Data Access Layer -->
+  <rect x="180" y="460" width="200" height="80" rx="5" ry="5" fill="#BBDEFB" stroke="#1565C0" stroke-width="2" />
+  <text x="280" y="490" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#333">Capa de Acceso a Datos</text>
+  <text x="280" y="515" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">datos: MascotaDAO.java</text>
+  <text x="280" y="530" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Conexión: mysql-connector-j-9.3.0.jar</text>
+  
+  <!-- EC2 Instance - Database -->
+  <rect x="440" y="280" width="200" height="160" rx="5" ry="5" fill="#C8E6C9" stroke="#2E7D32" stroke-width="2" />
+  <text x="540" y="310" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#2E7D32">VetTrackDB</text>
+  <text x="540" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">t2.micro - 100.24.67.113</text>
+  <text x="540" y="360" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">MySQL</text>
+  <text x="540" y="385" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">i-060293882d63540bb</text>
+  <text x="540" y="410" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Almacenamiento de Datos</text>
+  
+  <!-- Connection Line from Data Layer to DB -->
+  <line x1="380" y1="500" x2="440" y2="360" stroke="#333" stroke-width="3" />
+  <polygon points="433,365 440,360 435,370" fill="#333" />
+  <text x="410" y="450" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">Puerto 4503</text>
+  
+  <!-- Arrows between layers -->
+  <line x1="280" y1="360" x2="280" y2="370" stroke="#333" stroke-width="2" />
+  <polygon points="275,363 280,370 285,363" fill="#333" />
+  
+  <line x1="280" y1="450" x2="280" y2="460" stroke="#333" stroke-width="2" />
+  <polygon points="275,453 280,460 285,453" fill="#333" />
+  
+  <!-- Health Check Indicators -->
+  <circle cx="180" cy="210" r="10" fill="#4CAF50" />  
+  <circle cx="465" cy="305" r="10" fill="#4CAF50" />
+  
+  <!-- User accessing the application -->
+  <circle cx="80" cy="320" r="20" fill="#FFCC80" stroke="#E65100" stroke-width="2" />
+  <text x="80" y="325" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#333">👤</text>
+  
+  <line x1="100" y1="320" x2="180" y2="320" stroke="#E65100" stroke-width="2" />
+  <polygon points="173,315 180,320 173,325" fill="#E65100" />
+  
+  <!-- Title and Legend -->
+  <text x="400" y="640" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">VetTrack - Arquitectura en 3 Capas</text>
+  
+  <!-- Legend -->
+  <rect x="410" y="560" width="160" height="15" fill="#FFF9C4" stroke="#FBC02D" stroke-width="1" />
+  <text x="575" y="573" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">Capa de Presentación</text>
+  
+  <rect x="410" y="580" width="160" height="15" fill="#C8E6C9" stroke="#388E3C" stroke-width="1" />
+  <text x="575" y="593" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">Capa de Lógica de Negocio</text>
+  
+  <rect x="410" y="600" width="160" height="15" fill="#BBDEFB" stroke="#1565C0" stroke-width="1" />
+  <text x="575" y="613" font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">Capa de Acceso a Datos</text>
+</svg>
