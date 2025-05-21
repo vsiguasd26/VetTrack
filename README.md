@@ -77,10 +77,8 @@ wget https://cdn.mysql.com//Downloads/Connector-J/mysql-connector-j-9.3.0.zip
 sudo apt install unzip 
 unzip mysql-connector-j-9.3.0.zip
 sudo cp mysql-connector-j-9.3.0/mysql-connector-j-9.3.0.jar /opt/tomcat/lib/
-----------------
 sudo wget https://repo1.maven.org/maven2/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar
 sudo cp gson-2.13.1.jar /opt/tomcat/lib/
-
 ```
 
 ---
@@ -88,6 +86,10 @@ sudo cp gson-2.13.1.jar /opt/tomcat/lib/
 ### 5. ⚙️ Crear servicio para Tomcat
 
 Archivo: `/etc/systemd/system/tomcat.service`
+
+```bash
+sudo nano /etc/systemd/system/tomcat.servic
+```
 
 ```ini
 [Unit]
@@ -122,7 +124,7 @@ sudo systemctl start tomcat.service
 Sube tu archivo `.war` generado por NetBeans a:
 
 ```bash
-sudo cp VetTrackWeb.war /opt/tomcat/webapps/
+sudo cp VetTrack.war /opt/tomcat/webapps/
 ```
 
 Luego accede desde:
