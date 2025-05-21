@@ -172,7 +172,7 @@ FLUSH PRIVILEGES;
 ```bash
 sudo ufw enable
 sudo ufw allow 22/tcp
-sudo ufw allow from 100.24.67.113 to any port 4503 proto tcp
+sudo ufw allow from 44.202.127.132 to any port 4503 proto tcp
 ```
 ---
 
