@@ -1,7 +1,7 @@
 # VetTrack - Sistema Web para Gestión de Mascotas
 
 Este proyecto es una aplicación web Java que permite registrar y listar mascotas usando una arquitectura en 3 capas: presentación (JSP + API), lógica (servicios Java) y datos (MySQL).
-
+---
 La aplicación VetTrack fue estructurada utilizando una arquitectura en tres capas claramente separadas para garantizar un desarrollo modular y mantenible. La capa de presentación está compuesta por páginas JSP que interactúan con el usuario final y presentan la información mediante HTML y Bootstrap. La capa lógica se encarga del procesamiento de datos y la comunicación entre la interfaz y la base de datos, implementada mediante clases Java que manejan la lógica del negocio. Finalmente, la capa de datos está formada por clases DAO (como MascotaDAO) que realizan las operaciones directamente sobre la base de datos MySQL a través de JDBC, asegurando así una separación de responsabilidades y facilitando la escalabilidad de la aplicación.
 ---
 
